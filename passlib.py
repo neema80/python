@@ -1,18 +1,11 @@
-from passlib.hash import pbkdf2_sha512
+# import the hash algorithm
+from passlib.hash import pbkdf2_sha256
+# from passlib.hash import pbkdf2_sha256
+# generate new salt, and hash a password
+hash = pbkdf2_sha256.hash("toomanysecrets")
+print(hash)
 
-# returns the algorithm's name and hash result
-def hash_password(password):
-    return pbkdf2_sha512.hash(password)
+# verifying the password
+pbkdf2_sha256.verify("toomanysecrets", hash)
 
-# returns a boolean
-def check_hashed_password(password, hashed_password):
-    return pbkdf2_sha512.verify(password, hashed_password)
-
-my_password = 'admin123'
-
-print(hashed)
-
-if check_hashed_password('admin123', hashed):
-    print('password is valid')
-else:
-    print('invalid password')
+pbkdf2_sha256.verify("joshua", hash)
