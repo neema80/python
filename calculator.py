@@ -22,6 +22,10 @@ while True:
         val1 = float(input(print("enter first value: ")))
         val2 = float(input(print("second value: ")))
         result = val1 / val2
+    elif choose == 'multiply':
+        val1 = float(input(print("enter first value: ")))
+        val2 = float(input(print("second value: ")))
+        result = val1 * val2
     elif choose == 'minus':
         val1 = float(input(print("enter first value: ")))
         val2 = float(input(print("second value: ")))
