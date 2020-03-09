@@ -1,4 +1,4 @@
-#
+#! /usr/bin/python3
 # print("total = ", eval(input("enter some text: ")))
 # the calculator app versio 1.0
 
