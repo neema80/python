@@ -15,29 +15,29 @@ while True:
     if choose == 'quit':
         break
     elif choose == 'add':
-        val1 = float(input(print('enter first value: ')))
-        val2 = float(input(print('second value: ')))
+        val1 = float(input('enter first value: '))
+        val2 = float(input('second value: '))
         result = val1 + val2
     elif choose == 'division':
-        val1 = float(input(print("enter first value: ")))
-        val2 = float(input(print("second value: ")))
+        val1 = float(input('enter first value: '))
+        val2 = float(input('second value: '))
         result = val1 / val2
     elif choose == 'multiply':
-        val1 = float(input(print("enter first value: ")))
-        val2 = float(input(print("second value: ")))
+        val1 = float(input('enter first value: '))
+        val2 = float(input('second value: '))
         result = val1 * val2
     elif choose == 'minus':
-        val1 = float(input(print("enter first value: ")))
-        val2 = float(input(print("second value: ")))
+        val1 = float(input('enter first value: '))
+        val2 = float(input('second value: '))
         result = val1 - val2
     elif choose == 'floor':
-        val1 = float(input(print("enter first value: ")))
-        val2 = float(input(print("second value: ")))
+        val1 = float(input('enter first value: '))
+        val2 = float(input('second value: '))
         result = val1 // val2
     elif choose == 'exponentiation':
-        val1 = float(input(print("enter first value: ")))
-        val2 = float(input(print("second value: ")))
+        val1 = float(input('enter first value: '))
+        val2 = float(input('second value: '))
         result = val1 ** val2
     else:
         print("Command could not found!")
-    print("total = ", result)
+    print('total = ', result)
