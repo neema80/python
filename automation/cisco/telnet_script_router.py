@@ -19,12 +19,12 @@ tn = telnetlib.Telnet(HOST)
 # this waits until sees the Username prompt on the device
 # then passed our username to the device
 tn.read_until(b"Username: ")
-tn.write(user.encode('ascii') + b"\n")
+tn.write(user.encode("ascii") + b"\n")
 # this checks if the password is provided then runs the
 # steps below
 if password:
     tn.read_until(b"Password: ")
-    tn.write(password.encode('ascii') + b"\n")
+    tn.write(password.encode("ascii") + b"\n")
     tn.write(b"enable\n")
     tn.write(b"cisco\n") # this is our enable password
     tn.write(b"conf t\n")
@@ -38,4 +38,4 @@ if password:
     tn.write(b"exit\n")
 # this is simple print statement to show us the output
 # of the script on the screen
-print(tn.read_all().decode('ascii'))
+print(tn.read_all().decode("ascii"))
