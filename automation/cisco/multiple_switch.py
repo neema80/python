@@ -19,6 +19,8 @@ for IP in inventory:
     if password:
         tn.read_until(b"Password: ")
         tn.write(password.encode("ascii") + b"\n")
+        # to make things simpler we can give our user privilege level 15
+        # so we can get rid of the line 24 and 25
         tn.write(b"enable\n")
         tn.write(b"cisco\n") # this is our enable password
         tn.write(b"conf t\n")
