@@ -32,11 +32,6 @@ for i in range(1, 8) :
     # %d means integer
     # %f means float
 
-# touple unpacking
-tup1 = ((10, 20), ("a", "b"),(100, 200))
-for i, j in tup1 :
-    print(i,j)
-
 cakes = ["chocolate", "lemon", "carrot", "vanilla"]
 d1 = {"k1": tuple(cakes), "k2" : [10,20,30,40]}
 for i in d1 :

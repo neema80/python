@@ -15,3 +15,21 @@ print(min(tupl3))
 print(sorted(tupl3)) # it sorts the tuple but also converts it to list
 tupl3 = tuple(sorted(tupl3)) # we use the command tuple to change the format back to tuple again
 print(tupl3)
+
+# bear in mind when creating a tuple with just one element you have to put comma at the end
+# otherwise system will read it as another type
+# ie
+tup1 = (1)
+print(type(tup1),tup1)
+
+tup1 = (1,)
+print(type(tup1),tup1)
+# tuple unpacking and even changing the final format to list
+tup1 = ((10, 20), ("a", "b"),(100, 200))
+print(tup1)
+unpacked = []
+for i, j in tup1 :
+    print(i,j)
+    unpacked.append(list((i,j)))
+print(type(unpacked), unpacked)
+print(list(tup1))
