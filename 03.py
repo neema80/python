@@ -1,6 +1,3 @@
-__version__ = "1.0"
-__author__ = "Nima"
-
 a = 10
 b = 25
 c = 100
