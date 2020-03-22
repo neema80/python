@@ -19,13 +19,29 @@ print(square1())
 
 ########## *args #############
 # used when we are not sure how many arguments our function will have
-def tota(*arg, z = 10):
+def tota(*args, z = 10):
     """This adds as many arguments together
     plus adds a default value of 10 assigned to z argument by default"""
     s = 0
-    for i in arg:
+    for i in args:
         s += i
-    print(arg)
+    print(args)
     return s + z
 print(tota(20,30,40))
 
+######## **kwargs ###################
+# this is returning a dictionary as an output
+def Inventory(**kwargs):
+    Players = {}
+    for i in kwargs:
+        Players.update({i: kwargs})
+    return Players
+print(Inventory(a="Nima",b="Ali",c="Reza"))
+### another sample
+def Flower_test(**kwargs):
+    print(kwargs)
+    if "Flower" in kwargs:
+        print("we have {} flower for you!".format(kwargs["Flower"]))
+    else:
+        print("We don't have any flower for you")
+Flower_test(color = 0, Flower = "Tulip")    
