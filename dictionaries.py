@@ -29,3 +29,12 @@ menu = [("soup", 2.20),("chips", 1.4)]
 print(menu)
 d2 = dict(menu) # convert the nested touple into a dictionary
 print(d2)
+
+###### dictionary comprehension ###############
+dic = {}
+dic["A"] = 0 ; dic["B"] = 1 ; dic["C"] = 2
+print(dic)
+# just a simple dictionary
+# can be done like below
+print({["a","b","c"][i].upper(): i for i in range (3)})
+# same output as print(dic) and only using one line
