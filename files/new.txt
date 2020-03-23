@@ -6,3 +6,7 @@ be written on the file
 some new lines added
 This is a sample text going to 
 be written on the file
+ 
+some new lines added
+This is a sample text going to 
+be written on the file
