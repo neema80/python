@@ -38,3 +38,6 @@ print(dic)
 # can be done like below
 print({["a","b","c"][i].upper(): i for i in range (3)})
 # same output as print(dic) and only using one line
+
+dic2 = {x : x **2 for x in range(5,10)}
+print(dic2)

@@ -16,3 +16,7 @@ print(s1)
 s3 = {200, True, 2}
 print(s1.issuperset(s3)) # all of the s3 is in s1
 print(s3.issubset(s1)) # does s3 sub set of s1?
+
+#### set comprehension is similar to list comprehension
+set3 = {x**3 for x in range(10) if x%2 == 0}
+print(set3)

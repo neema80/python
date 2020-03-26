@@ -38,6 +38,7 @@ for i in range(0,11):
         count.append(item)
 print(count)
 # whith list comprehension this will be done in one line
+# [(action) (for statement) (conditional statement)]
 print([i**3 for i in range(0,11) if i>3 and i % 2 == 0])
 print([i for i in 'universe']) # works for text
 
