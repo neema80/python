@@ -1,14 +1,14 @@
 # a great module to work with iterator
-from itertools import *
+import itertools 
 
 # chain()
 list1 = [1,2,3,4,"a","b","c"]
 list2 = [100,200,300,"X","Y","Z"]
-print(list(chain(list1,list2))) # chain function makes an iterable of the arguments that we provide to it
+print(list(itertools.chain(list1,list2))) # chain function makes an iterable of the arguments that we provide to it
 
 # count()
 # it iterates until we break the sequnce just like while True loop we have to be wise
-for i in count(10,2.5):
+for i in itertools.count(10,2.5):
     if i <= 50:
         print(i)
     else:
@@ -18,8 +18,8 @@ for i in count(10,2.5):
 # just similar to count() we have to be careful to break the cycle
 # otherwise it would repeats infinately
 count = 0
-for i in cycle(range(1,100,6)):
-    if count <= 10:
+for i in itertools.cycle(range(1,50,6)):
+    if count <= 19:
         print(count , i)
         count += 1
     else:
@@ -34,4 +34,4 @@ list1 = list(range(10))
 list1 = list1[2:9:2] # starting from 2 # end to 8 with step of 2
 # just normal slicing
 print(list1)
-print(list(islice(range(10),2,9,2)))
+print(list(itertools.islice(range(10),2,9,2)))
