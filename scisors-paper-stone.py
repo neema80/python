@@ -1,4 +1,5 @@
 from random import randint
+from termcolor import colored
 
 player_health = 3
 ai_health = 3
@@ -48,9 +49,19 @@ def decesion(arg1, arg2):
         decider = 2
         return decider
     
-
+color1 = ''
+color2 = ''
 while True:
-    print('Your health is {} and AI health is {}'.format(player_health,ai_health))
+    if ai_health == player_health:
+        color1 = color2 = 'yellow'
+    elif ai_health > player_health:
+        color1 = 'red'
+        color2 = 'green'
+    else:
+        color1 = 'green'
+        color2 = 'red'
+    print(colored('Your health is', 'white'), colored('{}'.format(player_health),color1), colored('and AI health is','white'), colored('{}'.format(ai_health),color2))
+    # print('Your health is {} and AI health is {}'.format(player_health,ai_health))
     if ai_health == 0:
         print('AI reached zero helth and You Won!')
         break
