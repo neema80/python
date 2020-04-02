@@ -20,6 +20,8 @@ my_printer()
 
 # (a) is the multiplier argument and (x) is going to be passed when it is been called
 def create_multiplier(a):
+    #return lambda x: x * a
+    #same as the whole line in below
     def multiplier(x):
         return x * a
     return multiplier

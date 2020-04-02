@@ -1,82 +1,60 @@
-from random import randint
-from termcolor import colored
+import random
+import time
 
 player_health = 3
 ai_health = 3
-items = ['scisors','paper','stone']
+items = ['rock','scissor','paper']
 ai_selection = ''
 player_selection = ''
 application = 0
+random.seed(time.time()) # to randomize the randint call everytime game gets executed
 
-def ai_select():
-    ai_selection = items[(randint(0,2))]
+def ai_select(): # this functions selects one out of 3 options in items for AI
+    ai_selection = items[(random.randint(0,2))]
+    #print(ai_selection) # some cheating code here
     return ai_selection
 
 def decesion(arg1, arg2):
-    if arg1 == 'scisors' and arg2 == 'paper':
-        print('scicors will cut the paper')
-        print('AI have lost 1 HP')
-        decider = 1
-        return decider
-    elif arg1 == 'scisors' and arg2 == 'stone':
-        print('the stone will crush the scisors')
-        print('You have lost 1 HP')
-        decider = 0
-        return decider
-    if arg1 == 'paper' and arg2 == 'stone':
-        print('paper will grab the stone')
-        print('AI have lost 1 HP')
-        decider = 1
-        return decider
-    elif arg1 == 'paper' and arg2 == 'scisors':
-        print('the scisor will cut the paper')
-        print('You have lost 1 HP')
-        decider = 0
-        return decider
-    if arg1 == 'stone' and arg2 == 'scisors':
-        print('stone will crush the scisors')
-        print('AI have lost 1 HP')
-        decider = 1
-        return decider
-    elif arg1 == 'stone' and arg2 == 'paper':
-        print('paper will grab the stone')
-        print('You have lost 1 HP')   
-        decider = 0
-        return decider
+    if arg1 == items[1] and arg2 == items[2]:
+        print('scissor cuts paper! AI lost 1 HP')
+        return 1
+    elif arg1 == items[1] and arg2 == items[0]:
+        print('rock breaks scissor! You lost 1 HP')
+        return 0
+    if arg1 == items[2] and arg2 == items[0]:
+        print('paper covers rock! AI lost 1 HP')
+        return 1
+    elif arg1 == items[2] and arg2 == items[1]:
+        print('scissor cuts paper! You lost 1 HP')
+        return 0
+    if arg1 == items[0] and arg2 == items[1]:
+        print('rock breaks scissor! AI lost 1 HP')
+        return 1
+    elif arg1 == items[0] and arg2 == items[2]:
+        print('paper covers rock! You lost 1 HP')  
+        return 0
     else:
-        print('its a draw')
-        print('Try again!')
-        decider = 2
-        return decider
+        print('its a draw. Try again!')
+        return 2
     
-color1 = ''
-color2 = ''
 while True:
-    if ai_health == player_health:
-        color1 = color2 = 'yellow'
-    elif ai_health > player_health:
-        color1 = 'red'
-        color2 = 'green'
-    else:
-        color1 = 'green'
-        color2 = 'red'
-    print(colored('Your health is', 'white'), colored('{}'.format(player_health),color1), colored('and AI health is','white'), colored('{}'.format(ai_health),color2))
-    # print('Your health is {} and AI health is {}'.format(player_health,ai_health))
+    print('####### ROCK, SCISSOR, PAPER ####### v.1')
+    print('Your health is {} and AI health is {}'.format(player_health,ai_health))
     if ai_health == 0:
-        print('AI reached zero helth and You Won!')
+        print('yaaaaaaaay! You WON!')
         break
     elif player_health == 0:
-        print('You reached zero health and Lost!')
+        print('oooooooops! You LOST!')
         break
     ai_selection = ai_select()
     while True:
-        player_selection = input('Enter your selection: ')
+        player_selection = input('what do you pick? ')
         if player_selection in items:
             break
         else:
-            print('Wrong selection! Try again!')
+            print('wrong selection! Try again!')
             continue
-    print('AI selected {} and you selected {} So:'.format(ai_selection, player_selection))
+    print('AI selected {} and you selected {} So: '.format(ai_selection, player_selection),end='')
     application = decesion(player_selection, ai_selection)
     if application == 1:
         ai_health -= 1
