@@ -21,3 +21,8 @@ pay: str = "I receive a total of $5000"
 print(pay)
 print(pay.split("$"), "first section ", pay.split("$")[0] , "second part ", pay.split("$")[1])
 
+def avg(*args):
+    return sum(args) // len(args)
+
+print(avg(3))
+print(avg(1,2,3,4,10))
