@@ -1,2 +1,2 @@
-@echo off
-C:/Users/Nima/AppData/Local/Programs/Python/Python38-32/python.exe ./rock_scissors_paper.py
+@py "C:\Users\Nima\OneDrive\Development Lab\Github\python\rock_scissors_paper.py" %*
+@pause
