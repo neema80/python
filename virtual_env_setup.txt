@@ -1,0 +1,12 @@
+pip install virtualenv
+
+# then inside the folder run the command
+pythom -m venv venv<- thi one is just the folder name for getting it hidden should type .venv
+
+# for making the environment active should run one of the followings
+# cmd
+.\venv\Scripts\activade.bat
+# powershell
+.\venv\Scripts\activate.ps1
+
+# for each folder inside vscode should open the folder as a project
