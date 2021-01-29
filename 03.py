@@ -28,7 +28,7 @@ if a == 10:  # nested logical statement
 else:
     print("a is false!")
 
-# num = eval(input("Enter a number: ")) # by default the format is tring if we want to calculate it we have to change
+# num = eval(input("Enter a number: ")) # by default the format is string if we want to calculate it we have to change
 # the format using the eval function print("number is {}".format(num), " type is: ", type(num))
 #
 # now we use this input for searching in the touple

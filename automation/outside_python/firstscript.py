@@ -6,8 +6,12 @@ import time
 random.seed(time.time()) 
 number = random.randint(1,20)
 # print('Hello World!')
-# arguments = sys.argv #if any arguments passed to the python this function will store it as a list
-user_name = input('What is your name? ')
+arguments = sys.argv #if any arguments passed to the python this function will store it as a list
+print(arguments)
+if len(arguments)<=1 :
+    user_name = input('What is your name? ')
+else:
+    user_name = str(arguments[1])
 print('Hello {}, I am gussing number between 1 and 20. '.format(user_name))
 count = 1
 

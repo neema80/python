@@ -4,7 +4,7 @@ udld enable
 errdisable recovery cause all
 port-channel load-balance src-dst-ip
 ip name-server 8.8.8.8
-no ip http serverip http secire-server
+no ip http serverip http secure-server
 
 snmp-server community python1 RO
 snmp-server community python2 RW

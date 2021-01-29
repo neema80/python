@@ -3,7 +3,7 @@ print(type(d1))
 d1["A"] = 1
 d1["B"] = 2
 print(d1)
-toys = {"robots": "$25.90", "cars": "$45.30"}
+toys = {"robots": "£25.90", "cars": "£45.30"}
 print(toys)
 # we cannot use d1 + toys so we have to use update method
 d1.update(toys)
@@ -36,7 +36,7 @@ dic["A"] = 0 ; dic["B"] = 1 ; dic["C"] = 2
 print(dic)
 # just a simple dictionary
 # can be done like below
-print({["a","b","c"][i].upper(): i for i in range (3)})
+print({["a","b","c"][i]: i for i in range (3)})
 # same output as print(dic) and only using one line
 
 dic2 = {x : x **2 for x in range(5,10)}
